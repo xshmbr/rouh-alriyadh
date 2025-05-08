@@ -42,8 +42,9 @@ def convert_arabic_date(date_str):
         return None
 
 # تحميل البيانات
-file_path = '/mnt/c/Users/shmot/Downloads/فعاليات_الرياض_مايو2025.xlsx'
-df = pd.read_excel(file_path)
+# file_path = '/mnt/c/Users/shmot/Downloads/فعاليات_الرياض_مايو2025.xlsx'
+# df = pd.read_excel(file_path)
+df = pd.read_excel("فعاليات_الرياض_مايو2025.xlsx")
 
 # تحويل عمود التاريخ
 df['التاريخ'] = df['التاريخ'].apply(lambda x: convert_arabic_date(str(x)))
